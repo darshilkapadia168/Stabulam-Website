@@ -1405,150 +1405,8 @@ body {
   animation-delay: 0.2s;
 }
 
-/* ============================================ */
-/* RESPONSIVE DESIGN */
-/* ============================================ */
 
-@media (max-width: 1200px) {
-  .page4 {
-    padding: 4rem 4rem;
-    gap: 3rem;
-  }
 
-  .p4left h1 {
-    font-size: 2.4rem;
-  }
-
-  .p4right .rightcard {
-    min-width: 240px;
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 968px) {
-  .page4 {
-    flex-direction: column;
-    padding: 4rem 2rem;
-    gap: 3rem;
-    min-height: auto;
-  }
-
-  .p4left {
-    width: 100%;
-    max-width: 600px;
-  }
-
-  .p4left h1 {
-    font-size: 2.2rem;
-  }
-
-  .p4left p {
-    max-width: 100%;
-  }
-
-  .p4right {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .p4right .rightcard {
-    min-width: 280px;
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 768px) {
-  .page4 {
-    padding: 3rem 1.5rem;
-    gap: 2.5rem;
-  }
-
-  .p4left h4 {
-    font-size: 0.8rem;
-  }
-
-  .p4left h1 {
-    font-size: 1.9rem;
-    margin-top: 1.2rem;
-  }
-
-  .p4left p {
-    font-size: 1.05rem;
-    margin-top: 1.2rem;
-  }
-
-  .p4right {
-    gap: 1.5rem;
-  }
-
-  .p4right .rightcard {
-    padding: 32px 24px;
-    min-width: 100%;
-    max-width: 100%;
-  }
-
-  .rightcard-avatar {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 20px;
-  }
-
-  .rightcard-avatar i {
-    font-size: 42px;
-  }
-
-  .rightcard h3 {
-    font-size: 1.4rem;
-  }
-
-  .rightcard p {
-    font-size: 0.95rem;
-  }
-  .left-content p {
-    flex-wrap: wrap; /* stops overflow to the right */
-    align-items: flex-start; /* icon aligns to top of text */
-    gap: 10px;
-    line-height: 1.6;
-    word-break: break-word;
-  }
-
-  .left-content p i {
-    flex-shrink: 0; /* icon never shrinks */
-    margin-top: 2px; /* aligns icon with first line of text */
-  }
-
-  .left-content a {
-    word-break: break-all; /* prevents email from overflowing */
-  }
-}
-
-@media (max-width: 480px) {
-  .page4 {
-    padding: 2.5rem 1rem;
-  }
-
-  .p4left h1 {
-    font-size: 1.7rem;
-  }
-
-  .p4left p {
-    font-size: 1rem;
-  }
-
-  .p4right .rightcard {
-    padding: 28px 20px;
-  }
-
-  .rightcard h3 {
-    font-size: 1.3rem;
-  }
-  .left-content p {
-    font-size: 0.88rem;
-    padding: 0.85rem 1rem;
-  }
-
-}
 
 /* ============================================ */
 /* PAGE 5 - CONTACT/FOOTER SECTION */
@@ -2252,19 +2110,37 @@ body {
     font-size: 2rem;
   }
 
+  /* Intro paragraph — plain text, NOT a flex card */
   .left-content > p:first-of-type {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    backdrop-filter: none;
     font-size: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
   }
 
+  /* Contact info cards — flex with wrap fix */
   .left-content p {
     padding: 1rem 1.2rem;
     font-size: 0.95rem;
+    flex-wrap: wrap;          /* ✅ stops overflow */
+    align-items: flex-start;  /* ✅ icon aligns to top */
+    word-break: break-word;
   }
 
   .left-content p i {
     font-size: 1.1rem;
+    flex-shrink: 0;           /* ✅ icon never shrinks */
+    margin-top: 3px;          /* ✅ aligns with first line */
+  }
+
+  .left-content a {
+    word-break: break-all;    /* ✅ email never overflows */
   }
 
   .right-form {
@@ -2477,11 +2353,6 @@ body {
   }
 
   /* Page 4 */
-
-  .left-content p {
-    font-size: 0.88rem;
-    padding: 0.85rem 1rem;
-  }
   .rightcard,
   .rightcard::before,
   .rightcard::after,
