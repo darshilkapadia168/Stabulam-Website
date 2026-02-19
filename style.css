@@ -2474,3 +2474,18 @@ body {
     transform: none;
   }
 }
+@media (max-width: 480px) {
+  .left-content p {
+    flex-wrap: wrap;
+    word-break: break-word;
+    font-size: 0.85rem;
+  }
+
+  .left-content p i {
+    flex-shrink: 0;
+  }
+
+  .left-content a {
+    word-break: break-all;
+  }
+}
