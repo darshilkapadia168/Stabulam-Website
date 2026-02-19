@@ -1505,7 +1505,7 @@ body {
   .rightcard p {
     font-size: 0.95rem;
   }
-  left-content p {
+  .left-content p {
     flex-wrap: wrap; /* stops overflow to the right */
     align-items: flex-start; /* icon aligns to top of text */
     gap: 10px;
@@ -1543,6 +1543,11 @@ body {
   .rightcard h3 {
     font-size: 1.3rem;
   }
+  .left-content p {
+    font-size: 0.88rem;
+    padding: 0.85rem 1rem;
+  }
+
 }
 
 /* ============================================ */
